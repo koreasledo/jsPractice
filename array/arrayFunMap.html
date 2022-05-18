@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let names = [
+      "Steven Paul Jobs",
+      "Bill Gates",
+      "Mark Elliot Zuckerberg",
+      "Elon Musk",
+      "Jeff Bezos",
+      "Warren Edward Buffett",
+      "Larry Page",
+      "Larry Ellison",
+      "Tim Cook",
+      "Lloyd Blankfein",
+    ];
+
+    // map 1번 문제 모든 이름을 대문자로 바꾸어서 출력하시오.
+    let data1 = names.map((item)=>{
+      return item.toUpperCase();
+    });
+
+    console.log(data1);
+
+    // map 2번 문제 성을제외한 이름만 출력하시오. (예-[“Steven”,“Bill”,“Mark”,“Elon”…])
+    let data2 = names.map((item)=>{
+      return item.split(' ')[0];
+    });
+
+    console.log(data2);
+
+    // map 3번 문제 이름의 이니셜만 출력하시오. (예-[“SPU”,“BG”,“MEZ”,“EM”…])
+    let data3 = names.map((item)=>{
+      let splitName = item.split(' ');
+      let initial = '';
+      splitName.forEach((nameItem) => (initial += nameItem[0]));
+      return initial;
+    });
+
+    console.log(data3);
+  </script>
+</body>
+</html>
